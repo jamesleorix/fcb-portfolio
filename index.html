@@ -1,37 +1,207 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JLeorix Web Developer Portfolio</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- css -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #f1f1f1;
+            overflow-x: hidden;
+            background-color: #000000;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg fill-opacity='0.14'%3E%3Cpolygon fill='%23030a18' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23061330' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23091d47' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%230c265f' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%230F3077' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+		    background-attachment: fixed;
+		    background-size: cover;
+
+        }
+
+        /* Navbar */
+        nav.navbar {
+            background-color: #121212;
+            border-bottom: 1px solid #00f2ff;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: #00f2ff;
+            text-transform: uppercase;
+        }
+
+        .navbar-nav .nav-link {
+            color: #f1f1f1;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #00f2ff;
+        }
+
+        /* Hero Section */
+        #landing h1 {
+            font-size: 3rem;
+            background: linear-gradient(90deg, #00f2ff, #00ff88, #00f2ff);
+            background-size: 200% auto;
+            font-weight: 700;
+            text-transform: uppercase;
+            animation: gradientMove 3s infinite alternate;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes gradientMove {
+            from { background-position: 0% center; }
+            to { background-position: 100% center; }
+        }
+
+        #profile {
+            animation: pulse 2s infinite;
+            border: 3px solid #00f2ff;
+            border-radius: 50%;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 10px #00f2ff; }
+            50% { transform: scale(1.05); box-shadow: 0 0 30px #00f2ff; }
+            100% { transform: scale(1); box-shadow: 0 0 10px #00f2ff; }
+        }
+
+        /* Buttons */
+        .btn-custom {
+            border: 2px solid #00f2ff;
+            color: #00f2ff;
+            background: transparent;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        .btn-custom:hover {
+            background: #00f2ff;
+            color: #0d0d0d;
+            box-shadow: 0 0 15px #00f2ff;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #00f2ff;
+            text-transform: uppercase;
+        }
+
+        /* Cards */
+        
+        .card {
+            background-color: #1a1a1a;
+            font-color:#ffffff;
+            border: 1px solid #00f2ff;
+            border-radius: 15px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.4);
+        }
+
+        .card img {
+            border-radius: 15px 15px 0 0;
+        }
+
+        /* Skills */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .skill-item {
+            background: #1a1a1a;
+            border: 1px solid #00f2ff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .skill-item:hover {
+            background: #00f2ff;
+            color: #0d0d0d;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            border-top: 1px solid #00f2ff;
+            margin-top: 40px;
+            color: #aaa;
+           
+        }
+        .modal-title {
+	    color: #1a1a1a !important;
+		}
+
+       .custom-text {
+        color: #ffffff; /* White */
+        }
+
+
+
+    </style>
 </head>
-<body class="bg-dark text-light">
+<body>
 
-    <!-- Landing -->
-    <div class="container-fluid text-center py-5" id="landing">
-        <h1>Graphic Designer & UI/UX Designer & Web Developer</h1>
-        <p>Hi! My name is James Leorix Magnaye | Web Developer | UI/UX Designer. I enjoy photo and video editing and exploring new tools and trends in tech.</p>
-        <img src="images/profile.jpg" id="profile" class="rounded-circle mb-3" width="200" />
-        <a href="mailto:jleorixmagnaye@gmail.com" class="btn btn-primary btn-lg mt-3">Let's Work Together</a>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">JLeorix</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#landing">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </div>
+</nav>
 
-<!-- Include Bootstrap CSS & JS + Font Awesome in <head> -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Landing Section -->
+<section id="landing" class="text-center d-flex flex-column align-items-center justify-content-center vh-100">
+    <img src="images/profile.jpg" id="profile" alt="Profile" width="200" class="mb-4">
+    <h1>IT Business Analyst & Project Management</h1>
+    <p class="lead mt-3">Hi! I'm James Leorix Magnaye | Data Analyst | UI/UX Designer | Web Developer</p>
+    <a href="mailto:jleorixmagnaye@gmail.com" class="btn-custom mt-3">Let's Work Together</a>
+</section>
 
-<section id="about" class="container py-5 text-center">
-    <h2 class="text-info"><i class="fa fa-user"></i> About Me</h2>
+    <!-- About Me Section -->
+<section id="about" class="container py-5 text-center" data-aos="fade-up">
+    <h3 class="section-title">About Me</h3>
     <p class="mt-3">
         Passionate about technology and creative problem-solving, with skills in coding, photo and video editing, and exploring emerging tools and trends.
         Experienced in both hardware and software systems, including hands-on computer assembly and maintenance. Dedicated to continuous learning and contributing to innovative projects in technology and IT service management.
@@ -52,102 +222,65 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body d-flex justify-content-around">
-
-		<!-- CV Section -->
-		<div class="text-center">
-		  <i class="fa fa-id-card fa-3x text-info mb-2"></i>
-		  <p class="fw-bold text-info">CV</p>
-		  <a href="images/CV JLM.jpg" target="_blank" class="btn btn-outline-primary btn-sm">
-		    <i class="fa fa-eye"></i> View
-		  </a>
-		  <a href="images/CV JLM.jpg" download="James_Leorix_Magnaye_CV.jpg" class="btn btn-outline-success btn-sm mt-2">
-		    <i class="fa fa-download"></i> Download
-		  </a>
-		</div>
-
-		<!-- Resume Section -->
-		<div class="text-center">
-		  <i class="fa fa-id-card fa-3x text-info mb-2"></i>
-		  <p class="fw-bold text-info">Resume</p>
-		  <a href="images/RESUME JLM.jpg" target="_blank" class="btn btn-outline-primary btn-sm">
-		    <i class="fa fa-eye"></i> View
-		  </a>
-		  <a href="images/RESUME JLM.jpg" download="James_Leorix_Magnaye_Resume.jpg" class="btn btn-outline-success btn-sm mt-2">
-		    <i class="fa fa-download"></i> Download
-		  </a>
-		</div>
-
-
+        <!-- CV -->
+        <div class="text-center">
+          <i class="fa fa-id-card fa-3x text-info mb-2"></i>
+          <p class="fw-bold text-info">CV</p>
+          <a href="images/cv.jpg" target="_blank" class="btn btn-outline-primary btn-sm"><i class="fa fa-eye"></i> View</a>
+          <a href="images/cv.jpg" download="James_Leorix_Magnaye_CV.jpg" class="btn btn-outline-success btn-sm mt-2"><i class="fa fa-download"></i> Download</a>
+        </div>
+        <!-- Resume -->
+        <div class="text-center">
+          <i class="fa fa-id-card fa-3x text-info mb-2"></i>
+          <p class="fw-bold text-info">Resume</p>
+          <a href="images/resume.jpg" target="_blank" class="btn btn-outline-primary btn-sm"><i class="fa fa-eye"></i> View</a>
+          <a href="images/resume.jpg" download="James_Leorix_Magnaye_Resume.jpg" class="btn btn-outline-success btn-sm mt-2"><i class="fa fa-download"></i> Download</a>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-    </section>
-
-
-
-    <!-- Certifications -->
-    <section id="certifications" class="container py-5 text-center">
-        <h2 class="text-info"><i class="fa fa-certificate"></i> Training & Certifications</h2>
-        
-        <div id="certCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
-            <div class="carousel-inner">
-
-                <!-- Cert 1 -->
-                <div class="carousel-item active">
-                    <div class="card bg-dark border-info mx-auto" style="max-width: 500px;">
-                        <img src="images/csswb.jpg" class="card-img-top" alt="Cert 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Lean Six Sigma White Belt</h5>
-                            <p class="card-text">Certified in service industry efficiency and process improvement.</p>
-                            <button class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#certModal1">
-                                View Certificate
-                            </button>
-                        </div>
-                    </div>
+<!-- ✅ Certifications Section (Moved Here) -->
+<section id="certifications" class="container py-5" data-aos="fade-up">
+    <h2 class="section-title">Certifications</h2>
+    <div class="row g-4">
+        <!-- Certification 1 -->
+        <div class="col-md-4">
+            <div class="card h-100 text-center">
+                <img src="images/ecert1.jpg" class="card-img-top" alt="Certification 1">
+                <div class="card-body custom-text">
+                    <h6 class="card-title">ZUITT - Web Development Bootcamp</h6>
+                    <button class="btn-custom mt-2" data-bs-toggle="modal" data-bs-target="#cert1Modal">View Certificate</button>
                 </div>
-
-                <!-- Cert 2 -->
-                <div class="carousel-item">
-                    <div class="card bg-dark border-info mx-auto" style="max-width: 500px;">
-                        <img src="images/ecert.jpg" class="card-img-top" alt="Cert 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Network Communication Workshop</h5>
-                            <p class="card-text">Active participation in digital backbone & communication training.</p>
-                            <button class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#certModal2">
-                                View Certificate
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Cert 3 -->
-                <div class="carousel-item">
-                    <div class="card bg-dark border-info mx-auto" style="max-width: 500px;">
-                        <img src="images/ecert1.jpg" class="card-img-top" alt="Cert 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Web Development Bootcamp</h5>
-                            <p class="card-text">Hands-on training in modern web technologies and responsive design.</p>
-                            <button class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#certModal3">
-                                View Certificate
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#certCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#certCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
         </div>
-    </section>
+        <!-- Certification 2 -->
+        <div class="col-md-4">
+            <div class="card h-100 text-center">
+                <img src="images/csswb.jpg" class="card-img-top" alt="Certification 2">
+                <div class="card-body custom-text">
+                    <h6 class="card-title">Lean Six Sigma White Belt</h6>
+                    <button class="btn-custom mt-2" data-bs-toggle="modal" data-bs-target="#cert2Modal">View Certificate</button>
+                </div>
+            </div>
+        </div>
+        <!-- Certification 3 -->
+        <div class="col-md-4">
+            <div class="card h-100 text-center">
+                <img src="images/ecert.jpg" class="card-img-top" alt="Certification 3">
+                <div class="card-body custom-text">
+                    <h6 class="card-title">Digital Backbone & Communication Training</h6>
+                    <button class="btn-custom mt-2" data-bs-toggle="modal" data-bs-target="#cert3Modal">View Certificate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- Modals for Certificates -->
-    <div class="modal fade" id="certModal1" tabindex="-1">
+
+<!-- Modals for Certificates -->
+    <div class="modal fade" id="cert1Modal" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
@@ -163,7 +296,7 @@
         </div>
     </div>
 
-    <div class="modal fade" id="certModal2" tabindex="-1">
+    <div class="modal fade" id="cert2Modal" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
@@ -179,7 +312,7 @@
         </div>
     </div>
 
-    <div class="modal fade" id="certModal3" tabindex="-1">
+    <div class="modal fade" id="cert3Modal" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
@@ -195,55 +328,101 @@
         </div>
     </div>
 
-    <!-- Services -->
-    <section id="services" class="container py-5 text-center">
-        <h2 class="text-info"><i class="fa fa-briefcase"></i> Services</h2>
-        <p class="mt-3">Here are the services I offer to help bring your ideas to life:</p>
-        <div class="row mt-4 g-4">
+<!-- Certification Modals (unchanged, keep them below) -->
+
+   
+
+        <!-- Skills -->
+    <section id="Skills" class="container py-5" data-aos="fade-up">
+    <h3 class="section-title">SKILLS</h3>
+    <div class="row g-4">
+    <div class="skills-list mt-4">
             <div class="col-md-4">
-                <div class="card bg-dark border-info h-100 text-center p-3">
-                    <i class="fa fa-pencil-ruler fa-3x text-info mb-3"></i>
-                    <h5 class="card-title">UI/UX Design</h5>
-                    <p class="card-text">Designing user-friendly and visually appealing interfaces for web and mobile apps.</p>
+                <div class="card bg-dark border-info h-100">
+                    <div class="card-body custom-text">
+                        <h5 class="card-title text-info"><i class="fa fa-code"></i> Languages</h5>
+                        <ul class="list-unstyled">
+                            <li>C#</li>
+                            <li>HTML & CSS</li>
+                            <li>Python</li>
+                            <li>Java</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card bg-dark border-info h-100 text-center p-3">
-                    <i class="fa fa-photo-video fa-3x text-info mb-3"></i>
-                    <h5 class="card-title">Photo & Video Editing</h5>
-                    <p class="card-text">Professional editing for photos and videos to make them creative and engaging.</p>
+                <div class="card bg-dark border-info h-100">
+                    <div class="card-body custom-text">
+                        <h5 class="card-title text-info"><i class="fa fa-laptop-code"></i> Technical Skills</h5>
+                        <ul class="list-unstyled">
+                            <li>Graphic Designer</li>
+                            <li>Video Editor</li>
+                            <li>UI/UX Design</li>
+                            <li>App & Web Development</li>
+                            <li>PC Assembly</li>
+                            <li>Crimping</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card bg-dark border-info h-100 text-center p-3">
-                    <i class="fa fa-bullhorn fa-3x text-info mb-3"></i>
-                    <h5 class="card-title">Ads Video Creation</h5>
-                    <p class="card-text">Creating eye-catching promotional videos for social media and campaigns.</p>
+                <div class="card bg-dark border-info h-100">
+                    <div class="card-body custom-text">
+                        <h5 class="card-title text-info"><i class="fa fa-tools"></i> Tools</h5>
+                        <ul class="list-unstyled">
+                            <li>ChatGPT</li>
+                            <li>Visual Studio</li>
+                            <li>Android Studio</li>
+                            <li>Apache & Xampp</li>
+                            <li>Canva</li>
+                            <li>Figma</li>
+                            <li>Picsart</li>
+                            <li>Capcut</li>
+                            <li>Adobe Photoshop</li>
+                            <li>Google Drive</li>
+                            <li>Google Chrome</li>
+                            <li>GitHub</li>
+                            <li>Excel</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="card bg-dark border-info h-100 text-center p-3">
-                    <i class="fa fa-video fa-3x text-info mb-3"></i>
-                    <h5 class="card-title">Marketing Videos</h5>
-                    <p class="card-text">Producing creative marketing videos to help your business grow and reach audiences.</p>
+            <div class="col-md-4">
+                <div class="card bg-dark border-info h-100">
+                    <div class="card-body custom-text">
+                        <h5 class="card-title text-info"><i class="fa fa-database"></i> Soft Skills</h5>
+                        <ul class="list-unstyled">
+                            <li>Adaptability</li>
+                            <li>Time Management</li>
+                            <li>Teamwork</li>
+                            <li>Critical Thinking</li>
+                            <li>Continuos learning</li>
+                            <li>Emotional Intelligence</li> 
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="card bg-dark border-info h-100 text-center p-3">
-                    <i class="fa fa-laptop-code fa-3x text-info mb-3"></i>
-                    <h5 class="card-title">Web Development</h5>
-                    <p class="card-text">Building responsive and functional websites tailored to your needs and goals.</p>
+            <div class="col-md-4">
+                <div class="card bg-dark border-info h-100">
+                    <div class="card-body custom-text">
+                        <h5 class="card-title text-info"><i class="fa fa-user-check"></i> Databases</h5>
+                        <ul class="list-unstyled">
+                        <li>MySQL Database</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    </div>
+</section>
 
-    
 
 <!-- Projects -->
-<section id="projects" class="container py-5 text-center">
-    <h2 class="text-info"><i class="fa fa-code"></i> Projects</h2>
-    <div class="row mt-4">
+<section id="projects" class="container py-5" data-aos="fade-up">
+    <h3 class="section-title">PROJECTS</h3>
+    <div class="row g-4">
+
         
         <!-- Project 1 -->
         <div class="col-md-6 mb-4">
@@ -275,7 +454,7 @@
                         <span class="carousel-control-next-icon"></span>
                     </button>
                 </div>
-                <div class="card-body">
+                <div class="card-body custom-text">
                     <h5 class="card-title">Fix-It Mechanic Finder</h5>
                     <ul class="list-unstyled">
                     	<li><i class="fa fa-check-circle text-info"></i> Fix-It Mechanic Finder</li>
@@ -318,7 +497,7 @@
                         <span class="carousel-control-next-icon"></span>
                     </button>
                 </div>
-                <div class="card-body">
+                <div class="card-body custom-text">
                     <h5 class="card-title">UI/UX Design</h5>
                     <ul class="list-unstyled">
                         <li><i class="fa fa-check-circle text-info"></i> UI/UX Design</li>
@@ -352,7 +531,7 @@
                 <span class="carousel-control-next-icon"></span>
             </button>
         </div>
-        <div class="card-body">
+        <div class="card-body custom-text">
             <h5 class="card-title">Video Editing Showcase</h5>
             <ul class="list-unstyled">
             	<li><i class="fa fa-check-circle text-info"></i> Growing Up Video Debut</li>
@@ -394,7 +573,7 @@
                 <span class="carousel-control-next-icon"></span>
             </button>
         </div>
-        <div class="card-body">
+        <div class="card-body custom-text">
             <h5 class="card-title">Advertising & Marketing Photo</h5>
             <ul class="list-unstyled">
                 <li><i class="fa fa-check-circle text-info"></i> Advertising & Marketing Video/li>
@@ -442,7 +621,7 @@
                 <span class="carousel-control-next-icon"></span>
             </button>
         </div>
-        <div class="card-body">
+        <div class="card-body custom-text">
             <h5 class="card-title">Advertising & Marketing Photo</h5>
             <ul class="list-unstyled">
                 <li><i class="fa fa-check-circle text-info"></i> Advertising & Marketing Image</li>
@@ -485,7 +664,7 @@
                         <span class="carousel-control-next-icon"></span>
                     </button>
                 </div>
-                <div class="card-body">
+                <div class="card-body custom-text">
                     <h5 class="card-title">Invitation</h5>
                     <ul class="list-unstyled">
                     	<li><i class="fa fa-check-circle text-info"></i> Customized Invitation </li>
@@ -502,92 +681,11 @@
 </section>
 
 
-
-    <!-- Skills -->
-    <section id="skills" class="container py-5 text-center">
-        <h2 class="text-info"><i class="fa fa-tools"></i> Skills</h2>
-        <div class="row mt-4 g-4">
-            <div class="col-md-4">
-                <div class="card bg-dark border-info h-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-info"><i class="fa fa-code"></i> Languages</h5>
-                        <ul class="list-unstyled">
-                            <li>C#</li>
-                            <li>HTML & CSS</li>
-                            <li>Python</li>
-                            <li>Java</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card bg-dark border-info h-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-info"><i class="fa fa-laptop-code"></i> Technical Skills</h5>
-                        <ul class="list-unstyled">
-                            <li>Graphic Designer</li>
-                            <li>Video Editor</li>
-                            <li>UI/UX Design</li>
-                            <li>App & Web Development</li>
-                            <li>PC Assembly</li>
-                            <li>Crimping</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card bg-dark border-info h-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-info"><i class="fa fa-tools"></i> Tools</h5>
-                        <ul class="list-unstyled">
-                            <li>ChatGPT</li>
-                            <li>Visual Studio</li>
-                            <li>Android Studio</li>
-                            <li>Apache & Xampp</li>
-                            <li>Canva</li>
-                            <li>Figma</li>
-                            <li>Picsart</li>
-                            <li>Capcut</li>
-                            <li>Adobe Photoshop</li>
-                            <li>Google Drive</li>
-                            <li>Google Chrome</li>
-                            <li>GitHub</li>
-                            <li>Excel</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card bg-dark border-info h-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-info"><i class="fa fa-database"></i> Databases</h5>
-                        <ul class="list-unstyled">
-                            <li>MySQL Database</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card bg-dark border-info h-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-info"><i class="fa fa-user-check"></i> Soft Skills</h5>
-                        <ul class="list-unstyled">
-                            <li>Adaptability</li>
-                            <li>Time Management</li>
-                            <li>Teamwork</li>
-                            <li>Critical Thinking</li>
-                            <li>Continuos learning</li>
-                            <li>Emotional Intelligence</li>                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+<!-- Contact Section -->
+ <!-- Footer -->
     <footer class="text-center py-4 bg-dark border-top">
-        <h2 class="text-info"><i class="fa fa-envelope"></i> Contact Me</h2>
+      <section id="contact" class="container text-center py-5" data-aos="fade-up">
+      <h2 class="section-title">Contact Me</h2>
         <p>Email: <a href="mailto:jleorixmagnaye@gmail.com" class="text-info">jleorixmagnaye@gmail.com</a></p>
         <p>Phone: +639667269972 | +639918798149</p>
         <div class="d-flex justify-content-center gap-3 mb-2">
@@ -595,20 +693,16 @@
             <a href="https://www.instagram.com/jmslrxmgny/" class="text-light"><i class="fab fa-instagram fa-2x"></i></a>
             <a href="https://www.linkedin.com/in/james-leorix-m-magnaye-csswb-b56572361" class="text-light"><i class="fab fa-linkedin fa-2x"></i></a>
         </div>
-        <p class="small">Design by James Leorix Magnaye | Aspiring CCS Student</p>
+        <p class="small">Design by James Leorix Magnaye | Aspiring IT Service Management Student</p>
+        </section>
     </footer>
 
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/e09b72f523.js" crossorigin="anonymous"></script>
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-    function printCert(imageSrc) {
-        const win = window.open('');
-        win.document.write('<img src="'+imageSrc+'" style="width:100%;">');
-        win.print();
-    }
+        AOS.init();
     </script>
 </body>
 </html>
