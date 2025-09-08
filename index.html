@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>JLeorix Web Developer Portfolio</title>
+    <title>JLeorix Portfolio</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -70,7 +70,7 @@
 
         #profile {
             animation: pulse 2s infinite;
-            border: 3px solid #00f2ff;
+            border: 5px solid #00f2ff;
             border-radius: 50%;
         }
 
@@ -164,6 +164,20 @@
        .custom-text {
         color: #ffffff; /* White */
         }
+		.skills-list i {
+	    font-size: 20px;
+	    margin-right: 8px;
+	    color: #0d6efd; /* Bootstrap primary blue */
+	    /* 3D Shadow Effect */
+	    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+	    transition: transform 0.3s ease, text-shadow 0.3s ease;
+		}
+
+		.skills-list i:hover {
+		    transform: scale(1.3) rotate(10deg);
+		    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), 0 0 15px rgba(13, 110, 253, 0.8);
+		}
+
 
 
 
@@ -174,7 +188,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="#">JLeorix</a>
+        <a class="navbar-brand"class="nav-item" class="nav-link" href="#landing">JLeorix</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -193,10 +207,10 @@
 
 <!-- Landing Section -->
 <section id="landing" class="text-center d-flex flex-column align-items-center justify-content-center vh-100">
-    <img src="images/profile.jpg" id="profile" alt="Profile" width="200" class="mb-4">
-    <h1>IT Business Analyst & Project Management</h1>
-    <p class="lead mt-3">Hi! I'm James Leorix Magnaye | Data Analyst | UI/UX Designer | Web Developer</p>
-    <a href="mailto:jleorixmagnaye@gmail.com" class="btn-custom mt-3">Let's Work Together</a>
+    <img src="images/profile.jpg" id="profile" alt="Profile" width="300" class="mb-4">
+    <h1>Hi! I'm James Leorix Magnaye</h1>
+    <p class="lead mt-3">taking of Bachelor of Science Information Technology <br>at Laguna State Polytechnic University (Siniloan Campus) <br> Major in Service Management Program</p>
+    <a href="mailto:jleorixmagnaye@gmail.com" class="btn-custom mt-3">Send Email</a>
 </section>
 
     <!-- About Me Section -->
@@ -204,7 +218,7 @@
     <h3 class="section-title">About Me</h3>
     <p class="mt-3">
         Passionate about technology and creative problem-solving, with skills in coding, photo and video editing, and exploring emerging tools and trends.
-        Experienced in both hardware and software systems, including hands-on computer assembly and maintenance. Dedicated to continuous learning and contributing to innovative projects in technology and IT service management.
+        Experienced in both hardware and software systems, including hands-on computer assembly and maintenance. Dedicated to continuous learning and contributing to innovative projects in technology and IT Service management.
     </p>
 
     <!-- Main Icon to Open Modal -->
@@ -245,6 +259,7 @@
 <section id="certifications" class="container py-5" data-aos="fade-up">
     <h2 class="section-title">Certifications</h2>
     <div class="row g-4">
+
         <!-- Certification 1 -->
         <div class="col-md-4">
             <div class="card h-100 text-center">
@@ -260,18 +275,49 @@
             <div class="card h-100 text-center">
                 <img src="images/csswb.jpg" class="card-img-top" alt="Certification 2">
                 <div class="card-body custom-text">
-                    <h6 class="card-title">Lean Six Sigma White Belt</h6>
+                    <h6 class="card-title">Six Sigma PH - Lean Six Sigma White Belt</h6>
                     <button class="btn-custom mt-2" data-bs-toggle="modal" data-bs-target="#cert2Modal">View Certificate</button>
                 </div>
             </div>
         </div>
-        <!-- Certification 3 -->
+		<!-- Certification 3 -->
         <div class="col-md-4">
             <div class="card h-100 text-center">
                 <img src="images/ecert.jpg" class="card-img-top" alt="Certification 3">
                 <div class="card-body custom-text">
-                    <h6 class="card-title">Digital Backbone & Communication Training</h6>
+                    <h6 class="card-title">Building Digital Backbone - Unlocking the Secrets of Network Communication</h6>
                     <button class="btn-custom mt-2" data-bs-toggle="modal" data-bs-target="#cert3Modal">View Certificate</button>
+                </div>
+            </div>
+        </div>
+	<!-- Certification 4 -->
+    <div class="col-md-4">
+        <div class="card h-100 text-center">
+            <img src="images/dictcert.png" class="card-img-top" alt="Certification 4">
+            <div class="card-body custom-text">
+                <h6 class="card-title">DICT - Certificate of participation</h6>
+                <button class="btn-custom mt-2" data-bs-toggle="modal" data-bs-target="#cert4Modal">
+                  View Certificate</button>
+            </div>
+        </div>
+    </div>
+	<!-- Certification 5 -->
+        <div class="col-md-4">
+            <div class="card h-100 text-center">
+                <img src="images/ecert_DA.jpg" class="card-img-top" alt="Certification 5">
+                <div class="card-body custom-text">
+                    <h6 class="card-title">Cisco Certified - Data Analytics Essentials (Excel, SQL, Tableau)</h6>
+                    <button class="btn-custom mt-2" data-bs-toggle="modal" data-bs-target="#cert5Modal">View Certificate</button>
+                </div>
+            </div>
+        </div>
+        <!-- Certification 6 -->
+        <div class="col-md-4">
+            <div class="card h-100 text-center">
+                <img src="images/ecert_com.jpg" class="card-img-top" alt="Certification 6">
+                <div class="card-body custom-text">
+                    <h6 class="card-title">Cisco Certified - Digital Content Creation & Online Collaboration</h6>
+                    <button class="btn-custom mt-2" data-bs-toggle="modal" data-bs-target="#cert6Modal">View Certificate</button>
                 </div>
             </div>
         </div>
@@ -279,18 +325,20 @@
 </section>
 
 
+
+
 <!-- Modals for Certificates -->
     <div class="modal fade" id="cert1Modal" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title">Lean Six Sigma White Belt</h5>
+                    <h5 class="modal-title">ZUITT - Web Development Bootcamp</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body text-center">
                     <img src="images/ecert1.jpg" class="img-fluid mb-3" alt="Cert 1">
-                    <button onclick="printCert('images/ecert2.jpg')" class="btn btn-info"><i class="fa fa-print"></i> Print </button>
-                    <a href="images/csswb.jpg" download class="btn btn-success"><i class="fa fa-download"></i> Download</a>
+                    <button onclick="printCert('images/ecert1.jpg')" class="btn btn-info"><i class="fa fa-print"></i> Print </button>
+                    <a href="images/ecert1.jpg" download class="btn btn-success"><i class="fa fa-download"></i> Download</a>
                 </div>
             </div>
         </div>
@@ -300,13 +348,13 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title">Network Communication Workshop</h5>
+                    <h5 class="modal-title">Six Sigma PH - Lean Six Sigma White Belt</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body text-center">
                     <img src="images/csswb.jpg" class="img-fluid mb-3" alt="Cert 2">
                     <button onclick="printCert('images/csswb.jpg')" class="btn btn-info"><i class="fa fa-print"></i> Print</button>
-                    <a href="images/ecert.jpg" download class="btn btn-success"><i class="fa fa-download"></i> Download</a>
+                    <a href="images/csswb.jpg" download class="btn btn-success"><i class="fa fa-download"></i> Download</a>
                 </div>
             </div>
         </div>
@@ -316,106 +364,147 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title">Web Development Bootcamp</h5>
+                    <h5 class="modal-title">Building Digital Backbone - Unlocking the Secrets of Network Communication</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body text-center">
                     <img src="images/ecert.jpg" class="img-fluid mb-3" alt="Cert 3">
-                    <button onclick="printCert('images/ecert2.jpg')" class="btn btn-info"><i class="fa fa-print"></i> Print </button>
-                    <a href="images/ecert1.jpg" download class="btn btn-success"><i class="fa fa-download"></i> Download</a>
+                    <button onclick="printCert('images/ecert.jpg')" class="btn btn-info"><i class="fa fa-print"></i> Print </button>
+                    <a href="images/ecert.jpg" download class="btn btn-success"><i class="fa fa-download"></i> Download</a>
                 </div>
             </div>
         </div>
     </div>
+     <div class="modal fade" id="cert4Modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h6 class="modal-title">DICT Certification </h6>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="images/dictcert.png" class="img-fluid mb-3" alt="Cert 4">
+                    <button onclick="printCert('images/dictcert.png')" class="btn btn-info"><i class="fa fa-print"></i> Print </button>
+                    <a href="images/dictcert.png" download class="btn btn-success"><i class="fa fa-download"></i> Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal fade" id="cert5Modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cisco Certified - Data Analytics Essentials (Excel, SQL, Tableau)</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="images/ecert_DA.jpg" class="img-fluid mb-3" alt="Cert 5">
+                    <button onclick="printCert('images/ecert_DA.jpg')" class="btn btn-info"><i class="fa fa-print"></i> Print</button>
+                    <a href="images/ecert_DA.jpg" download class="btn btn-success"><i class="fa fa-download"></i> Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="cert6Modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cisco Certified - Digital Content Creation & Online Collaboration</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="images/ecert_com.jpg" class="img-fluid mb-3" alt="Cert 6">
+                    <button onclick="printCert('images/ecert_com.jpg')" class="btn btn-info"><i class="fa fa-print"></i> Print </button>
+                    <a href="images/ecert_com.jpg" download class="btn btn-success"><i class="fa fa-download"></i> Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 <!-- Certification Modals (unchanged, keep them below) -->
 
    
 
-        <!-- Skills -->
-    <section id="Skills" class="container py-5" data-aos="fade-up">
-    <h3 class="section-title">SKILLS</h3>
+  <!-- Skills -->
+<section id="Skills" class="container py-5" data-aos="fade-up">
+    <h3 class="section-title text-center text-info mb-4">SKILLS</h3>
     <div class="row g-4">
-    <div class="skills-list mt-4">
-            <div class="col-md-4">
+        <div class="skills-list mt-4">
+            <!-- Languages -->
+            <div class="col-md-4 mb-4">
                 <div class="card bg-dark border-info h-100">
                     <div class="card-body custom-text">
                         <h5 class="card-title text-info"><i class="fa fa-code"></i> Languages</h5>
                         <ul class="list-unstyled">
-                            <li>C#</li>
-                            <li>HTML & CSS</li>
-                            <li>Python</li>
-                            <li>Java</li>
+                            <li><i class="fa-brands fa-cuttlefish text-info"></i> C#</li>
+                            <li><i class="fa-brands fa-html5" style="color: #74C0FC;"></i>HTML&CSS</li>
+                            <li><i class="fa-brands fa-python" style="color: #74C0FC;"></i> Python</li>
+                            <li><i class="fa-brands fa-java"style="color: #74C0FC;"></i> Java</li>
+                            <li><i class="fa-brands fa-js"style="color: #74C0FC;"></i> JavaScript</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+
+            <!-- Technical Skills -->
+            <div class="col-md-4 mb-4">
                 <div class="card bg-dark border-info h-100">
                     <div class="card-body custom-text">
                         <h5 class="card-title text-info"><i class="fa fa-laptop-code"></i> Technical Skills</h5>
                         <ul class="list-unstyled">
-                            <li>Graphic Designer</li>
-                            <li>Video Editor</li>
-                            <li>UI/UX Design</li>
-                            <li>App & Web Development</li>
-                            <li>PC Assembly</li>
-                            <li>Crimping</li>
+                            <li><i class="fa fa-paintbrush"style="color: #74C0FC;"></i> Graphic Editor</li>
+                            <li><i class="fa fa-video"style="color: #74C0FC;"></i> Video Editor</li>
+                            <li><i class="fa fa-palette"style="color: #74C0FC;"></i> UI/UX Design</li>
+                            <li><i class="fa fa-globe"style="color: #74C0FC;"></i> App & Web Development</li>
+                            <li><i class="fa fa-desktop"style="color: #74C0FC;"></i> PC Assembly</li>
+                            <li><i class="fa fa-plug"style="color: #74C0FC;"></i> Crimping</li>
+                            <li><i class="fa fa-table"style="color: #74C0FC;"></i> Excel Encoding</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+
+            <!-- Tools -->
+            <div class="col-md-4 mb-4">
                 <div class="card bg-dark border-info h-100">
                     <div class="card-body custom-text">
                         <h5 class="card-title text-info"><i class="fa fa-tools"></i> Tools</h5>
                         <ul class="list-unstyled">
-                            <li>ChatGPT</li>
-                            <li>Visual Studio</li>
-                            <li>Android Studio</li>
-                            <li>Apache & Xampp</li>
-                            <li>Canva</li>
-                            <li>Figma</li>
-                            <li>Picsart</li>
-                            <li>Capcut</li>
-                            <li>Adobe Photoshop</li>
-                            <li>Google Drive</li>
-                            <li>Google Chrome</li>
-                            <li>GitHub</li>
-                            <li>Excel</li>
+                            <li><i class="fa fa-robot"style="color: #74C0FC;"></i> ChatGPT</li>
+                            <li><i class="fa fa-code"style="color: #74C0FC;"></i> Visual Studio</li>
+                            <li><i class="fa fa-android"style="color: #74C0FC;"></i> Android Studio</li>
+                            <li><i class="fa fa-server"style="color: #74C0FC;"></i> Apache & Xampp</li>
+                            <li><i class="fa fa-paint-brush"style="color: #74C0FC;"></i> Canva</li>
+                            <li><i class="fa-brands fa-figma"style="color: #74C0FC;"></i> Figma</li>
+                            <li><i class="fa fa-image"style="color: #74C0FC;"></i> Picsart</li>
+                            <li><i class="fa fa-scissors"style="color: #74C0FC;"></i> Capcut</li>
+                            <li><i class="fa-brands fa-adobe"style="color: #74C0FC;"></i> Adobe Photoshop</li>
+                            <li><i class="fa fa-cloud"style="color: #74C0FC;"></i> Google Drive</li>
+                            <li><i class="fa fa-globe"style="color: #74C0FC;"></i> Google Chrome</li>
+                            <li><i class="fa-brands fa-github"style="color: #74C0FC;"></i> GitHub</li>
+                            <li><i class="fa fa-table"style="color: #74C0FC;"></i> Excel</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+
+            <!-- Database -->
+            <div class="col-md-4 mb-4">
                 <div class="card bg-dark border-info h-100">
                     <div class="card-body custom-text">
-                        <h5 class="card-title text-info"><i class="fa fa-database"></i> Soft Skills</h5>
+                        <h5 class="card-title text-info"><i class="fa fa-database"></i> Database</h5>
                         <ul class="list-unstyled">
-                            <li>Adaptability</li>
-                            <li>Time Management</li>
-                            <li>Teamwork</li>
-                            <li>Critical Thinking</li>
-                            <li>Continuos learning</li>
-                            <li>Emotional Intelligence</li> 
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card bg-dark border-info h-100">
-                    <div class="card-body custom-text">
-                        <h5 class="card-title text-info"><i class="fa fa-user-check"></i> Databases</h5>
-                        <ul class="list-unstyled">
-                        <li>MySQL Database</li>
+                            <li><i class="fa fa-database"style="color: #74C0FC;"></i> MySQL Database</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
     </div>
 </section>
+
 
 
 <!-- Projects -->
@@ -574,9 +663,9 @@
             </button>
         </div>
         <div class="card-body custom-text">
-            <h5 class="card-title">Advertising & Marketing Photo</h5>
+            <h5 class="card-title">Advertising & Marketing Video</h5>
             <ul class="list-unstyled">
-                <li><i class="fa fa-check-circle text-info"></i> Advertising & Marketing Video/li>
+                <li><i class="fa fa-check-circle text-info"></i> Advertising & Marketing Video</li>
                 <li><i class="fa fa-check-circle text-info"></i> Social Media Eyecatching Video</li>
                 <li><i class="fa fa-check-circle text-info"></i> Product Promo </li>
                 <li><i class="fa fa-check-circle text-info"></i> Engaging Video </li>
@@ -693,7 +782,7 @@
             <a href="https://www.instagram.com/jmslrxmgny/" class="text-light"><i class="fab fa-instagram fa-2x"></i></a>
             <a href="https://www.linkedin.com/in/james-leorix-m-magnaye-csswb-b56572361" class="text-light"><i class="fab fa-linkedin fa-2x"></i></a>
         </div>
-        <p class="small">Design by James Leorix Magnaye | Aspiring IT Service Management Student</p>
+        <p class="small">Design by James Leorix Magnaye | Aspiring IT Service Management Program Student.</p>
         </section>
     </footer>
 
