@@ -111,7 +111,7 @@
         
         .card {
             background-color: #1a1a1a;
-            font-color:#ffffff;
+            color: #ffffff;  /* Fixed: Changed from invalid 'font-color' to 'color' for white text */
             border: 1px solid #00f2ff;
             border-radius: 15px;
             transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -147,6 +147,9 @@
             background: #00f2ff;
             color: #0d0d0d;
         }
+        
+
+
 
         /* Footer */
         footer {
@@ -158,7 +161,7 @@
            
         }
         .modal-title {
-	    color: #1a1a1a !important;
+	    color: #d6d4d4 !important;
 		}
 
        .custom-text {
@@ -188,7 +191,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand"class="nav-item" class="nav-link" href="#landing">JLeorix</a>
+        <a class="navbar-brand"class="nav-item" class="nav-link" href="#landing">JAMES LEORIX PORTFOLIO</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -321,6 +324,97 @@
                 </div>
             </div>
         </div>
+        <!-- Certification 7 -->
+        <div class="col-md-4">
+            <div class="card h-100 text-center">
+                <img src="images/SQL.jpg" class="card-img-top" alt="Certification 7">
+                <div class="card-body custom-text">
+                    <h6 class="card-title">Course Certificate - Introduction to SQL</h6>
+                    <button class="btn-custom mt-2" data-bs-toggle="modal" data-bs-target="#cert7Modal">View Certificate</button>
+                </div>
+            </div>
+        </div>
+        <!-- Certification 8 -->
+        <div class="col-md-4">
+            <div class="card h-100 text-center">
+                <img src="images/html.jpg" class="card-img-top" alt="Certification 8">
+                <div class="card-body custom-text">
+                    <h6 class="card-title">Course Certificate - Introduction to HTML</h6>
+                    <button class="btn-custom mt-2" data-bs-toggle="modal" data-bs-target="#cert8Modal">View Certificate</button>
+                </div>
+            </div>
+        </div>
+        		<!-- Certification 9 -->
+        <div class="col-md-4">
+            <div class="card h-100 text-center">
+                <img src="images/ccs.jpg" class="card-img-top" alt="Certification 9">
+                <div class="card-body custom-text">
+                    <h6 class="card-title">Course Certificate - Introduction to CSS</h6>
+                    <button class="btn-custom mt-2" data-bs-toggle="modal" data-bs-target="#cert9Modal">View Certificate</button>
+                </div>
+            </div>
+        </div>
+	<!-- Certification 10 -->
+    <div class="col-md-4">
+        <div class="card h-100 text-center">
+            <img src="images/pythonec.jpg" class="card-img-top" alt="Certification 10">
+            <div class="card-body custom-text">
+                <h6 class="card-title">Course Certificate - Introduction to Python</h6>
+                <button class="btn-custom mt-2" data-bs-toggle="modal" data-bs-target="#cert10Modal">
+                  View Certificate</button>
+            </div>
+        </div>
+    </div>
+	<!-- Certification 11 -->
+        <div class="col-md-4">
+            <div class="card h-100 text-center">
+                <img src="images/smm.jpg" class="card-img-top" alt="Certification 11">
+                <div class="card-body custom-text">
+                    <h6 class="card-title"> Sololearn Certified - Social Media Marketing With AI</h6>
+                    <button class="btn-custom mt-2" data-bs-toggle="modal" data-bs-target="#cert11Modal">View Certificate</button>
+                </div>
+            </div>
+        </div>
+        <!-- Certification 12 -->
+        <div class="col-md-4">
+            <div class="card h-100 text-center">
+                <img src="images/vc.jpg" class="card-img-top" alt="Certification 12">
+                <div class="card-body custom-text">
+                    <h6 class="card-title">Sololearn Certified - Vibe Coding</h6>
+                    <button class="btn-custom mt-2" data-bs-toggle="modal" data-bs-target="#cert12Modal">View Certificate</button>
+                </div>
+            </div>
+        </div>
+        <!-- Certification 13 -->
+        <div class="col-md-4">
+            <div class="card h-100 text-center">
+                <img src="images/DA.jpg" class="card-img-top" alt="Certification 13">
+                <div class="card-body custom-text">
+                    <h6 class="card-title">Sololearn Certified - Data Analytics with AI</h6>
+                    <button class="btn-custom mt-2" data-bs-toggle="modal" data-bs-target="#cert13Modal">View Certificate</button>
+                </div>
+            </div>
+        </div>
+         <!-- Certification 14 -->
+        <div class="col-md-4">
+            <div class="card h-100 text-center">
+                <img src="images/tech.jpg" class="card-img-top" alt="Certification 14">
+                <div class="card-body custom-text">
+                    <h6 class="card-title">Sololearn Certified - Tech for Everyone</h6>
+                    <button class="btn-custom mt-2" data-bs-toggle="modal" data-bs-target="#cert14Modal">View Certificate</button>
+                </div>
+            </div>
+        </div>
+        <!-- Certification 15 -->
+        <div class="col-md-4">
+            <div class="card h-100 text-center">
+                <img src="images/csharpin.jpg" class="card-img-top" alt="Certification 15">
+                <div class="card-body custom-text">
+                    <h6 class="card-title">Sololearn Certified - C# Intermediate</h6>
+                    <button class="btn-custom mt-2" data-bs-toggle="modal" data-bs-target="#cert15Modal">View Certificate</button>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -421,6 +515,145 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="cert7Modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title">Course Certificate - Introduction to SQL</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="images/SQL.jpg" class="img-fluid mb-3" alt="Cert 7">
+                    <button onclick="printCert('images/SQL.jpg')" class="btn btn-info"><i class="fa fa-print"></i> Print </button>
+                    <a href="images/SQL.jpg" download class="btn btn-success"><i class="fa fa-download"></i> Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="cert8Modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title">Course Certificate - Introduction to HTML</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="images/html.jpg" class="img-fluid mb-3" alt="Cert 8">
+                    <button onclick="printCert('images/html.jpg')" class="btn btn-info"><i class="fa fa-print"></i> Print</button>
+                    <a href="images/html.jpg" download class="btn btn-success"><i class="fa fa-download"></i> Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="cert9Modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title">Course Certificate - Introduction to CSS</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="images/ccs.jpg" class="img-fluid mb-3" alt="Cert 9">
+                    <button onclick="printCert('images/ccs.jpg')" class="btn btn-info"><i class="fa fa-print"></i> Print </button>
+                    <a href="images/ccs.jpg" download class="btn btn-success"><i class="fa fa-download"></i> Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div class="modal fade" id="cert10Modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h6 class="modal-title">Course Certificate - Introduction to Python </h6>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="images/pythonec.jpg" class="img-fluid mb-3" alt="Cert 10">
+                    <button onclick="printCert('images/pythonec.jpg')" class="btn btn-info"><i class="fa fa-print"></i> Print </button>
+                    <a href="images/pythonec.jpg" download class="btn btn-success"><i class="fa fa-download"></i> Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal fade" id="cert11Modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sololearn Certified - Social Media Marketing with AI</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="images/smm.jpg" class="img-fluid mb-3" alt="Cert 11">
+                    <button onclick="printCert('images/smm.jpg')" class="btn btn-info"><i class="fa fa-print"></i> Print</button>
+                    <a href="images/smm.jpg" download class="btn btn-success"><i class="fa fa-download"></i> Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="cert12Modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sololearn Certified - Vibe Coding</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="images/vc.jpg" class="img-fluid mb-3" alt="Cert 12">
+                    <button onclick="printCert('images/vc.jpg')" class="btn btn-info"><i class="fa fa-print"></i> Print </button>
+                    <a href="images/vc.jpg" download class="btn btn-success"><i class="fa fa-download"></i> Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal fade" id="cert13Modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sololearn Certified - Data Analytics with AI</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="images/DA.jpg" class="img-fluid mb-3" alt="Cert 13">
+                    <button onclick="printCert('images/DA.jpg')" class="btn btn-info"><i class="fa fa-print"></i> Print </button>
+                    <a href="images/DA.jpg" download class="btn btn-success"><i class="fa fa-download"></i> Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal fade" id="cert14Modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sololearn Certified - Tech for Everyone</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="images/tech.jpg" class="img-fluid mb-3" alt="Cert 14">
+                    <button onclick="printCert('images/tech.jpg')" class="btn btn-info"><i class="fa fa-print"></i> Print </button>
+                    <a href="images/tech.jpg" download class="btn btn-success"><i class="fa fa-download"></i> Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="modal fade" id="cert15Modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sololearn Certified - C# Intermediate</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="images/csharpin.jpg" class="img-fluid mb-3" alt="Cert 15">
+                    <button onclick="printCert('images/csharpin.jpg')" class="btn btn-info"><i class="fa fa-print"></i> Print </button>
+                    <a href="images/csharpin.jpg" download class="btn btn-success"><i class="fa fa-download"></i> Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
 <!-- Certification Modals (unchanged, keep them below) -->
