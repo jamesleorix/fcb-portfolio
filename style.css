@@ -154,4 +154,6 @@ section p {
 	font-weight: bold;
 	cursor: pointer;
 }
-#contact
+.hidden-cert {
+    display: none;
+}
